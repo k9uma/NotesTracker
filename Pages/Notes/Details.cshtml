@@ -1,0 +1,37 @@
+﻿@page
+@model NotesTracker.Pages.Notes.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Note</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Note.TaskTitle)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Note.TaskTitle)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Note.TaskDescription)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Note.TaskDescription)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Note.TaskDueDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Note.TaskDueDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Note.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
